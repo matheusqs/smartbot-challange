@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const SidenavContainer = styled.div`
-  height: -webkit-fill-available;
+  position: absolute;
   background-color: #fff;
   width: min-content;
+  height: -webkit-fill-available;
   padding: 16px 12px;
   border-radius: 8px;
   transition: width 0.2s;
@@ -59,7 +60,6 @@ export const Item = styled.button`
     color: transparent;
     white-space: nowrap;
     font-size: 14px;
-    transition: width 0.2s, color 0.2s;
     margin: 0;
   }
 

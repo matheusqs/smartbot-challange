@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
-interface GeneralInfoPropos {
+interface GeneralInfoProps {
   total: number;
 }
 
+export const SidenavContainer = styled.div`
+  width: 61px;
+  position: relative;
+`;
+
 export const DashboardContainer = styled.div`
   padding: 24px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 
   > div:last-of-type {
@@ -30,6 +35,10 @@ export const Header = styled.section`
   svg {
     color: #00b39d;
     font-size: 21px;
+  }
+
+  > p {
+    color: #b4b3b5;
   }
 
   .line {
@@ -80,7 +89,7 @@ export const GeneralOperations = styled.section`
     div {
       &:first-of-type {
         h4 {
-          color: ${({ total }: GeneralInfoPropos) =>
+          color: ${({ total }: GeneralInfoProps) =>
             total >= 0 ? '#00b39d' : '#ff4501'};
         }
       }
@@ -162,4 +171,72 @@ export const Transaction = styled.div`
     line-height: 14px;
     color: #b4b3b5;
   }
+`;
+
+export const AddRobot = styled.div`
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+
+  button.add-robot {
+    transition: box-shadow 0.2s;
+    height: 70px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    margin-right: 32px;
+
+    &:hover {
+      box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      height: 70px;
+    }
+  }
+
+  div {
+    flex: 1;
+
+    h4 {
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 14px;
+      color: #b4b3b5;
+
+      strong {
+        color: #00b39d;
+        font-weight: bold;
+      }
+    }
+  }
+
+  h5 {
+    color: #b4b3b5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  button.upgrade {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #00b39d;
+  }
+`;
+
+export const Robots = styled.div`
+  display: grid;
+  gap: 24px;
+  margin-left: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 `;

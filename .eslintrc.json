@@ -36,7 +36,8 @@
     ],
     "prettier/prettier": "error",
     "no-use-before-define": "off",
-    "import/order": "off"
+    "import/order": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "import/resolver": {
