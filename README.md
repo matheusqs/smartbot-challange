@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# SmartBot FrontEnd Challange
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a robot trader management. In it you can add your robots for doing transacions on multiple strategies.
 
 ## Available Scripts
 
